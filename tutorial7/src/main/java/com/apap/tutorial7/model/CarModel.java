@@ -45,7 +45,7 @@ public class CarModel implements Serializable, Comparable<CarModel>{
 	@Column(name = "amount", nullable = false)
 	private Integer amount;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn (name = "dealer_id", referencedColumnName = "id", nullable = false)
 	@OnDelete(action = OnDeleteAction.NO_ACTION)
 	private DealerModel dealer;
